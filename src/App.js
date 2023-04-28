@@ -1,4 +1,3 @@
-import './App.css';
 import { ChakraProvider } from "@chakra-ui/react"
 import { Input, Avatar, Button, InputGroup, InputLeftAddon, Heading, Stack, Flex  } from "@chakra-ui/react";
 
@@ -6,14 +5,14 @@ function App() {
   return (
     <ChakraProvider>
       <Flex justify="center">
-        <Stack w={500}>
+        <Stack w={500} border="1px solid #f5f5f5" p={2} mt="10%">
           
-          <Flex justify="center" pt={10}>
+          <Flex justify="center" pt={3}>
             <Avatar bg='teal.500'/>
           </Flex>
 
           <Flex justify="center">
-            <Heading>Welcome</Heading>
+            <Heading color="#319795">Welcome</Heading>
           </Flex>
 
           <InputGroup direction="row" px={3} pt={4}>
