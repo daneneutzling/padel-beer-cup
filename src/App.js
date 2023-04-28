@@ -1,6 +1,6 @@
 import './App.css';
 import { ChakraProvider } from "@chakra-ui/react"
-import { Input, Avatar, InputGroup, InputLeftAddon } from "@chakra-ui/react";
+import { Input, Avatar, Button, InputGroup, InputLeftAddon } from "@chakra-ui/react";
 
 function App() {
   return (
