@@ -1,35 +1,38 @@
 import './App.css';
 import { ChakraProvider } from "@chakra-ui/react"
-import { Input, Avatar, Button, InputGroup, InputLeftAddon } from "@chakra-ui/react";
+import { Input, Avatar, Button, InputGroup, InputLeftAddon, Heading, Stack, Flex  } from "@chakra-ui/react";
 
 function App() {
   return (
-    <ChakraProvider className='chackra'>
-      <div className='App'>
-        <div className='icon-user'>
-          <Avatar bg='teal.500'/>
-        </div>
+    <ChakraProvider>
+      <Flex justify="center">
+        <Stack w={500}>
+          
+          <Flex justify="center" pt={10}>
+            <Avatar bg='teal.500'/>
+          </Flex>
 
-        <div className='input-group'>
-          <InputGroup>
+          <Flex justify="center">
+            <Heading>Welcome</Heading>
+          </Flex>
+
+          <InputGroup direction="row" px={3} pt={4}>
             <InputLeftAddon children='User'/>
             <Input type='text'/>
           </InputGroup>
-        </div>
-        
-        <div className='input-group'>
-          <InputGroup>
+          <InputGroup direction="row" p={3}>
             <InputLeftAddon children='Password'/>
             <Input type='password'/>
           </InputGroup>
-        </div>
 
-        <div className='button-submit'>
-          <Button colorScheme='teal' variant='outline'>
-            Login
-          </Button>
-        </div>
-      </div>
+          <Flex justify="center" maxW="inherit" w="100%" px={3}>
+            <Button colorScheme='teal' variant='outline' w="100%" maxW="inherit">
+              Login
+            </Button>
+          </Flex>
+
+        </Stack>
+      </Flex>
     </ChakraProvider>
   );
 }
