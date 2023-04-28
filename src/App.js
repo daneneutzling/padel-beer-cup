@@ -16,6 +16,13 @@ function App() {
             <Input type='text'/>
           </InputGroup>
         </div>
+        
+        <div className='input-group'>
+          <InputGroup>
+            <InputLeftAddon children='Password'/>
+            <Input type='password'/>
+          </InputGroup>
+        </div>
       </div>
     </ChakraProvider>
   );
