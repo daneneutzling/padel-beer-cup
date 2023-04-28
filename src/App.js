@@ -23,6 +23,12 @@ function App() {
             <Input type='password'/>
           </InputGroup>
         </div>
+
+        <div className='button-submit'>
+          <Button colorScheme='teal' variant='outline'>
+            Login
+          </Button>
+        </div>
       </div>
     </ChakraProvider>
   );

@@ -17,3 +17,16 @@
   width: 400px;
   padding: 10px 10px 0px 10px;
 }
+
+.button-submit {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  max-width: inherit;
+  width: 100%;
+}
+
+.button-submit Button {
+  max-width: inherit;
+  width: 100%;
+}
