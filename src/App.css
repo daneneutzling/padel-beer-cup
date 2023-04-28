@@ -1,10 +1,7 @@
-.chakra {
-  position: relative;
-}
-
 .App {
   border: 1px solid black;
   width: max-content;
+  margin: 10% auto;
 }
 
 .icon-user {
