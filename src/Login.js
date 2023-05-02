@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ChakraProvider } from "@chakra-ui/react";
 import { Input, Avatar, Button, InputGroup, InputLeftAddon, Heading, Stack, Flex, Alert, AlertIcon } from "@chakra-ui/react";
+import { Switch, Route } from "react-router-dom";
+import Home from "./Home";
 
 function Login() {
 
@@ -21,7 +23,9 @@ function Login() {
       alert("Invalid password, try again!");
 
     } else {
-      return true;
+      <Switch>
+      <Route path="/home" element={<Home />}></Route>
+      </Switch>
     }
   };
 
