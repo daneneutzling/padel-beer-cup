@@ -1,9 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./Login";
 
 function AppRoutes() {
     return (
         <BrowserRouter>
-            <Routes />
+            <Routes>
+                <Route path="/" element={<Login />}></Route>
+            </Routes>
         </BrowserRouter>
     );
 }

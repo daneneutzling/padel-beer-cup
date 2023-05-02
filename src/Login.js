@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Route, BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Input, Avatar, Button, InputGroup, InputLeftAddon, Heading, Stack, Flex, Alert, AlertIcon } from "@chakra-ui/react";
 
