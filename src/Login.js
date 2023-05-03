@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { ChakraProvider } from "@chakra-ui/react";
 import { Input, Avatar, Button, InputGroup, InputLeftAddon, Heading, Stack, Flex, Alert, AlertIcon } from "@chakra-ui/react";
-import { useNavigate, Route } from "react-router-dom";
-import Home from "./Home";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -14,16 +13,16 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!user || !password) {
-      alert("Inform User and Password.");
+      setErrorMessage("Inform User and Password.");
     
     } else if (user !== "user") {
-      alert("Invalid user, try again!");
+      setErrorMessage("Invalid user, try again!");
       
     } else if (password !== "password") {
-      alert("Invalid password, try again!");
+      setErrorMessage("Invalid password, try again!");
 
     } else {
-      navigate('/home');
+      navigate("/Home");
     }
   };
 
@@ -41,6 +40,15 @@ function Login() {
           </Flex>
 
           <form onSubmit={handleSubmit}>
+            <Flex justify="center" mt={2}>
+              {errorMessage && 
+                <Alert status='error'>
+                  <AlertIcon/>
+                  {errorMessage}
+                  </Alert>
+              }
+            </Flex>
+
             <InputGroup direction="row" px={3} pt={4}>
               <InputLeftAddon children='User'/>
               <Input type='text' value={user} onChange={(e) => setUser(e.target.value)}/>
