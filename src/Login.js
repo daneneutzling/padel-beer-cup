@@ -1,31 +1,29 @@
 import React, { useState } from 'react';
 import { ChakraProvider } from "@chakra-ui/react";
 import { Input, Avatar, Button, InputGroup, InputLeftAddon, Heading, Stack, Flex, Alert, AlertIcon } from "@chakra-ui/react";
-import { Switch, Route } from "react-router-dom";
+import { useNavigate, Route } from "react-router-dom";
 import Home from "./Home";
 
 function Login() {
 
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!user || !password) {
       alert("Inform User and Password.");
-      return;
     
     } else if (user !== "user") {
       alert("Invalid user, try again!");
-      return;
       
     } else if (password !== "password") {
       alert("Invalid password, try again!");
 
     } else {
-      <Switch>
-      <Route path="/home" element={<Home />}></Route>
-      </Switch>
+      navigate('/home');
     }
   };
 
