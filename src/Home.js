@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
 import { Route, BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Box, Flex, Heading, Link, Text, Divider } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link, Text, Divider, Button } from "@chakra-ui/react";
 import { LinkIcon } from '@chakra-ui/icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen, faCircleQuestion} from "@fortawesome/free-regular-svg-icons";
 import { faTableTennisPaddleBall } from "@fortawesome/free-solid-svg-icons";
+import Modal from './Feedback';
 
 function Home() {
+  const [isOpenFeedback, setOpenFeedback] = useState(false);
+
+  function handleOpenFeedbackModal() {
+    setOpenFeedback(true);
+  }
+
+  function handleCloseFeedbackModal() {
+    setOpenFeedback(false);
+  }
 
   return (
     <ChakraProvider>
@@ -38,12 +48,11 @@ function Home() {
 
         <Divider borderColor="gray.400" borderWidth="1px" w="99%"/>
 
-        <Link href='/Home' _hover={{textDecoration:"none"}} mt="10%">
-          <Box w="90%" h={9} m={2} mt="15%" bg="teal" borderRadius="md" display="flex" alignItems="center" p="4%" >
-            <FontAwesomeIcon icon={faCircleQuestion} style={{margin:'6%'}}/>
-            <Text display="flex" justifyContent="center">Send Feedback!</Text>
-          </Box>
-        </Link>
+        <Box w="90%" h={9} m={2} mt="15%" bg="teal" borderRadius="md" display="flex" alignItems="center" p="4%" >
+          <FontAwesomeIcon icon={faCircleQuestion} style={{margin:'6%'}}/>  
+          <button onClick={handleOpenFeedbackModal} display="flex" justifyContent="center">Send Feedback!</button>
+          <Modal isOpen={isOpenFeedback} onClose={handleCloseFeedbackModal} />
+        </Box>
 
         <Flex>
           <Link href='https://www.instagram.com/dane_neutzling/' _hover={{textDecoration:"none"}} m={5}>
