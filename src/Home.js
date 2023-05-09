@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Route, BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Box, Flex, Heading, Link, Text, Divider } from "@chakra-ui/react";
-import { CheckCircleIcon, LinkIcon, InfoIcon } from '@chakra-ui/icons';
+import { LinkIcon } from '@chakra-ui/icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeOpen,faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelopeOpen, faCircleQuestion} from "@fortawesome/free-regular-svg-icons";
+import { faTableTennisPaddleBall } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
 
@@ -15,8 +16,8 @@ function Home() {
         <Box m={3}>
           <a href='/Home'>
             <Flex>
-              <CheckCircleIcon w={8} h={8}/>
-              <Heading ml={3} mt={2} size='sm'>Padel Beer Cup</Heading>
+              <FontAwesomeIcon icon={faTableTennisPaddleBall} fontSize={40} style={{margin:'2% 3% 0% 3%'}}/>
+              <Heading mt="2%" size='md'>PADEL <br/> BEER CUP</Heading>
             </Flex>
           </a>
         </Box>
