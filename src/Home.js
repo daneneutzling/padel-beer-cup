@@ -55,6 +55,10 @@ function Home() {
         <Link href="whatsapp:+5554981141209" _hover={{textDecoration:"none"}} m={5} ml={0}>
             <FontAwesomeIcon icon={faWhatsapp} fontSize={25}/>
         </Link>
+        
+        <Link href='https://mail.google.com/mail/u/0/?view=cm&tf=0&to=neutzlingdane@gmail.com' _hover={{textDecoration:"none"}} m={5} ml={0}>
+          <FontAwesomeIcon icon={faEnvelopeOpen} fontSize={22}/>
+        </Link>
 
       </Box>
     </ChakraProvider>
