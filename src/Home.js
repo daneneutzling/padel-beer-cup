@@ -44,9 +44,13 @@ function Home() {
           </Box>
         </Link>
 
-          <Link href='https://www.instagram.com/dane_neutzling/' _hover={{textDecoration:"none"}} m={5}>
-              <FontAwesomeIcon icon={faInstagram} fontSize={25}/>
-          </Link>
+        <Link href='https://www.instagram.com/dane_neutzling/' _hover={{textDecoration:"none"}} m={5}>
+            <FontAwesomeIcon icon={faInstagram} fontSize={25}/>
+        </Link>
+
+        <Link href='https://www.facebook.com/daniela.neutzling/' _hover={{textDecoration:"none"}} m={5} ml={0}>
+            <FontAwesomeIcon icon={faFacebook} fontSize={25}/>
+        </Link>
 
       </Box>
     </ChakraProvider>
