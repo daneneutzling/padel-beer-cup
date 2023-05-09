@@ -43,6 +43,11 @@ function Home() {
             <Text display="flex" justifyContent="center" ml="15%">Link Link</Text>
           </Box>
         </Link>
+
+          <Link href='https://www.instagram.com/dane_neutzling/' _hover={{textDecoration:"none"}} m={5}>
+              <FontAwesomeIcon icon={faInstagram} fontSize={25}/>
+          </Link>
+
       </Box>
     </ChakraProvider>
   );
