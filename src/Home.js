@@ -52,6 +52,10 @@ function Home() {
             <FontAwesomeIcon icon={faFacebook} fontSize={25}/>
         </Link>
 
+        <Link href="whatsapp:+5554981141209" _hover={{textDecoration:"none"}} m={5} ml={0}>
+            <FontAwesomeIcon icon={faWhatsapp} fontSize={25}/>
+        </Link>
+
       </Box>
     </ChakraProvider>
   );
