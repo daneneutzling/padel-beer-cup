@@ -5,7 +5,7 @@ import { Box, Flex, Heading, Link, Text, Divider } from "@chakra-ui/react";
 import { CheckCircleIcon, LinkIcon, InfoIcon } from '@chakra-ui/icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelopeOpen,faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 
 function Home() {
 
@@ -39,26 +39,28 @@ function Home() {
 
         <Link href='/Home' _hover={{textDecoration:"none"}} mt="10%">
           <Box w="90%" h={9} m={2} mt="15%" bg="teal" borderRadius="md" display="flex" alignItems="center" p="4%" >
-            <InfoIcon ml="8%"/>
-            <Text display="flex" justifyContent="center" ml="15%">Link Link</Text>
+            <FontAwesomeIcon icon={faCircleQuestion} style={{margin:'6%'}}/>
+            <Text display="flex" justifyContent="center">Send Feedback!</Text>
           </Box>
         </Link>
 
-        <Link href='https://www.instagram.com/dane_neutzling/' _hover={{textDecoration:"none"}} m={5}>
-            <FontAwesomeIcon icon={faInstagram} fontSize={25}/>
-        </Link>
+        <Flex>
+          <Link href='https://www.instagram.com/dane_neutzling/' _hover={{textDecoration:"none"}} m={5}>
+              <FontAwesomeIcon icon={faInstagram} fontSize={25}/>
+          </Link>
 
-        <Link href='https://www.facebook.com/daniela.neutzling/' _hover={{textDecoration:"none"}} m={5} ml={0}>
-            <FontAwesomeIcon icon={faFacebook} fontSize={25}/>
-        </Link>
+          <Link href='https://www.facebook.com/daniela.neutzling/' _hover={{textDecoration:"none"}} m={5} ml={0}>
+              <FontAwesomeIcon icon={faFacebook} fontSize={25}/>
+          </Link>
 
-        <Link href="whatsapp:+5554981141209" _hover={{textDecoration:"none"}} m={5} ml={0}>
-            <FontAwesomeIcon icon={faWhatsapp} fontSize={25}/>
-        </Link>
-        
-        <Link href='https://mail.google.com/mail/u/0/?view=cm&tf=0&to=neutzlingdane@gmail.com' _hover={{textDecoration:"none"}} m={5} ml={0}>
-          <FontAwesomeIcon icon={faEnvelopeOpen} fontSize={22}/>
-        </Link>
+          <Link href="whatsapp:+5554981141209" _hover={{textDecoration:"none"}} m={5} ml={0}>
+              <FontAwesomeIcon icon={faWhatsapp} fontSize={25}/>
+          </Link>
+          
+          <Link href='https://mail.google.com/mail/u/0/?view=cm&tf=0&to=neutzlingdane@gmail.com' _hover={{textDecoration:"none"}} m={5} ml={0}>
+            <FontAwesomeIcon icon={faEnvelopeOpen} fontSize={22}/>
+          </Link>
+        </Flex>
 
       </Box>
     </ChakraProvider>
